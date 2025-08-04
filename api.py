@@ -8,7 +8,7 @@ app = Flask(__name__)
 filename = "lr_model.pkl"
 model = pickle.load(open(filename, 'rb'))
 
-@app.route("/",methods=['POST'])
+@app.route("/",methods=['GET'])
 def main_page():
     return "<p>Loan Prediction API !</p>"
 
